@@ -1,5 +1,5 @@
 const React = require('react')
-const Comment = require('./comment')
+const Topics = require('./topics')
 
 
 module.exports = function App (props) {
@@ -7,15 +7,14 @@ module.exports = function App (props) {
   const { store, model} = props
   // var store = props.store
   // var model = props.model
-  const author = 'test'
-
+  const topic = "Motivation"
   return (
     <div>
       <h1>{model.appName}</h1>
-      <div>{model.description}</div>
-      <button onClick={() => store.changeGreeting()}>Change</button> 
-      <Comment author={author} text="heya" />
-      <Comment author="mix" text="lets demo the multiple component functionality" />
+      <h3>{model.welcome}</h3>
+      <h4>{model.description}</h4>
+      <p>{model.topics}</p>
+      <Topics topic={topic} />
     </div>
 
   )

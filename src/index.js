@@ -8,18 +8,10 @@ const App = require('./components/app')
 const Store = require('./store')
 
 const model = {
-  appName: 'My plain JS app',
-  description: 'just a demo app',
-  items: {
-    1: {id: 1, name: 'banana', stock: 2, price:2} 
-  },
-
-  cart:  {
-
-  },
-
-  total: 0
-
+  appName: 'āwhina',
+  welcome: 'Haere mai ki āwhina | Welcome to āwhina.',
+  description: 'This is a resource for anyone who needs a bit of support or help.',
+  choose: 'He aha tō hiahia i tenei wā? | What do you need today?'
 }
 const store = Store(model)
 
@@ -37,8 +29,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   function render (store, model) {
     const root = document.querySelector('#app')
     ReactDOM.render(
-      <App store={store} model={model} name="mix page" />,
-      root
+      <App store={store} model={model} />, root
     )
   }
 
