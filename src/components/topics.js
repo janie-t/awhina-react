@@ -1,12 +1,11 @@
-const debug = require('debug')('components:topics')
 const React = require('react')
 
 module.exports = function (props) {
-  const { topic } = props
+  const { topic, id, store } = props
 
   return (
-    <div>
-      <a href=''>{topic}</a>
+    <div id='topic'>
+      <a href=''>{topics}</a>
     </div>
   )
 }

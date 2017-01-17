@@ -1,21 +1,24 @@
 const React = require('react')
+const _ = require('lodash')
+
+//components
+//such as header or main or topics etc
 const Topics = require('./topics')
 
-
 module.exports = function App (props) {
-  console.log('props', props)
-  const { store, model} = props
-  // var store = props.store
-  // var model = props.model
-  const topic = "Motivation"
-  return (
-    <div>
-      <h1>{model.appName}</h1>
-      <h3>{model.welcome}</h3>
-      <h4>{model.description}</h4>
-      <p>{model.topics}</p>
-      <Topics topic={topic} />
-    </div>
+  console.log("State", state)
 
+  const { store, state } = props
+
+  console.log("This is store", store)
+
+  return (
+    <div className="choose">
+      <h1>awhina</h1>
+      <h3>Welcome</h3>
+      <h4>App for help and support</h4>
+      <p>Choose from the topics</p>
+    </div>
   )
+
 }
