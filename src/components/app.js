@@ -5,12 +5,13 @@ import RaisedButton from 'material-ui/RaisedButton'
 
 //components
 //such as header or main or topics etc
-//const Topics = require('./topics')
+const Motivate = require('./motivate')
 
 module.exports = function App (props) {
   console.log("State", state)
 
   const { store, state } = props
+
 
   console.log("This is store", store)
   const route = state.route
@@ -18,6 +19,7 @@ module.exports = function App (props) {
   switch (route) {
     case 'index':
       return (
+
         <div className="choose">
           <h1>{state.appName}</h1>
           <h3>{state.welcome}</h3>
@@ -47,11 +49,15 @@ module.exports = function App (props) {
               Have a laugh
             </RaisedButton><br/><br/>
 
+            <RaisedButton className="raisedButton" backgroundColor="pink">
+              Contact us
+            </RaisedButton><br/><br/>
+
           </div>
         </div>
       )
     case 'motivation':
-      return (<div>motivation page</div>)
+      return < Motivate store={store} />
   }
 
 }
