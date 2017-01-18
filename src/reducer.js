@@ -4,7 +4,7 @@ const _ = require('lodash')
 module.exports = function (state, action) {
   const newState = clone(state)
 
-  console.log("This is the reducer sending the state", state);
+  return(newState)
 
 
   // switch (action.type) {

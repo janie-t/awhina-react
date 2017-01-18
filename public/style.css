@@ -7,7 +7,7 @@
 body {
   background-color: #ade6d8;
   text-align: center;
-  color: #181818;
+  color: #1a1a1a;
 }
 
 img {
@@ -19,7 +19,6 @@ embed {
   max-width: 70%;
   max-height: 70%;
 }
-
 
 
 /********CLASS STYLES***********/
@@ -36,15 +35,13 @@ embed {
   margin-left: 25%;
 }
 
-.one {
-  border-radius: 25px;
+.raisedButton {
   border-color: white;
   border-style: solid;
   background: #adbce6;
+  font-size: 1em;
   padding: .2em;
   width: 150px;
-  height: 80px;
-  float: left;
   margin: 1em;
   display: flex;
   align-items: center;
@@ -89,14 +86,14 @@ embed {
   margin: 0 0 2.5em 0;
 }
 
-#button {
-  background-color: #D3D3D3;
+/*button {
+  background-color: red;
   padding: 0 .2em 0 .2em;
   border-radius: 10px;
-  font-size: 0.5em;
-  font: black;
+  font-size: 1em;
+  font: #1a1a1a;
   margin: 0 0 2.5em 0;
-}
+}*/
 
 /*****GENERAL STYLES**********/
 

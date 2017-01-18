@@ -1,9 +1,11 @@
 const React = require('react')
+const ReactDOM = require('react-dom')
 const _ = require('lodash')
+import RaisedButton from 'material-ui/RaisedButton'
 
 //components
 //such as header or main or topics etc
-const Topics = require('./topics')
+//const Topics = require('./topics')
 
 module.exports = function App (props) {
   console.log("State", state)
@@ -14,11 +16,27 @@ module.exports = function App (props) {
 
   return (
     <div className="choose">
-      <h1>awhina</h1>
-      <h3>Welcome</h3>
-      <h4>App for help and support</h4>
-      <p>Choose from the topics</p>
+      <h1>{state.appName}</h1>
+      <h3>{state.welcome}</h3>
+      <h4>{state.description}</h4><br/><br/>
+      <p>{state.choose}</p><br/><br/>
+
+      <div class="topics">
+        <RaisedButton
+          className="raisedButton"
+          backgroundColor="#adbce6">
+            Motivation
+        </RaisedButton><br/><br/>
+
+        <RaisedButton className="raisedButton" backgroundColor="#adbce6">
+          Study Tips
+        </RaisedButton><br/><br/>
+
+        <RaisedButton className="raisedButton" backgroundColor="#adbce6">
+          Have a laugh
+        </RaisedButton><br/><br/>
+
+      </div>
     </div>
   )
-
 }
