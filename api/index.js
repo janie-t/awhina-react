@@ -1,7 +1,5 @@
-const myRoute = require('./a-resource')
+const topics = require('./topics')
 
 module.exports = {
-  myRoute
+  topics: topics
 }
-
-

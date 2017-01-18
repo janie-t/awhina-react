@@ -4,6 +4,7 @@ const ReactDOM = require('react-dom')
 const { createStore} = require('redux')
 const MuiThemeProvider = require('material-ui/styles/MuiThemeProvider').default
 const reducer = require('./reducer')
+const request = require('superagent')
 
 
 // components
@@ -23,7 +24,7 @@ const initialState = {
   welcome: 'Haere mai ki āwhina | Welcome to āwhina.',
   description: 'This is a resource for anyone who needs a bit of support or help.',
   choose: 'He aha tō hiahia i tenei wā? | What do you need today?',
-  topic: 'random media'
+  topics: []
 }
 
 const store = createStore(reducer, initialState)
@@ -44,6 +45,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     )
   }
 
-  store.dispatch({type: 'GO!'})
+  request('/api/v1/topics', (err, res) => {
+    store.dispatch({type: 'UPDATE_TOPICS', payload: res.body.data})
+  })
 
+  store.dispatch({type: 'GO'})
 })
