@@ -18,6 +18,7 @@ const App = ({state, store}) => {
 }
 
 const initialState = {
+  route: 'index',
   appName: 'āwhina',
   welcome: 'Haere mai ki āwhina | Welcome to āwhina.',
   description: 'This is a resource for anyone who needs a bit of support or help.',
@@ -42,6 +43,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     )
   }
 
-  render(store.getState())
+  store.dispatch({type: 'GO!'})
 
 })

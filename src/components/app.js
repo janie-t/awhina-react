@@ -13,30 +13,45 @@ module.exports = function App (props) {
   const { store, state } = props
 
   console.log("This is store", store)
+  const route = state.route
 
-  return (
-    <div className="choose">
-      <h1>{state.appName}</h1>
-      <h3>{state.welcome}</h3>
-      <h4>{state.description}</h4><br/><br/>
-      <p>{state.choose}</p><br/><br/>
+  switch (route) {
+    case 'index':
+      return (
+        <div className="choose">
+          <h1>{state.appName}</h1>
+          <h3>{state.welcome}</h3>
+          <h4>{state.description}</h4><br/><br/>
+          <p>{state.choose}</p><br/><br/>
 
-      <div class="topics">
-        <RaisedButton
-          className="raisedButton"
-          backgroundColor="#adbce6">
-            Motivation
-        </RaisedButton><br/><br/>
+          <div className="topics">
+            <RaisedButton
+              onClick={
+                () => {
+                  store.dispatch({
+                    type: 'CHANGE_ROUTE',
+                    payload: 'motivation'
+                  })
+                }
+              }
+              className="raisedButton"
+              backgroundColor="#adbce6">
+                Motivation
+            </RaisedButton><br/><br/>
 
-        <RaisedButton className="raisedButton" backgroundColor="#adbce6">
-          Study Tips
-        </RaisedButton><br/><br/>
+            <RaisedButton className="raisedButton" backgroundColor="#adbce6">
+              Study Tips
+            </RaisedButton><br/><br/>
 
-        <RaisedButton className="raisedButton" backgroundColor="#adbce6">
-          Have a laugh
-        </RaisedButton><br/><br/>
+            <RaisedButton className="raisedButton" backgroundColor="#adbce6">
+              Have a laugh
+            </RaisedButton><br/><br/>
 
-      </div>
-    </div>
-  )
+          </div>
+        </div>
+      )
+    case 'motivation':
+      return (<div>motivation page</div>)
+  }
+
 }
