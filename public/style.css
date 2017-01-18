@@ -50,7 +50,7 @@ embed {
 }
 
 .item {
-  background: red;
+  background: white;
   width: 70%;
   max-width: 800px;
   min-height: 20%;
@@ -90,6 +90,10 @@ button {
   font-size: 1em;
   font: #1a1a1a;
   margin: 0 0 2.5em 0;
+}
+
+input {
+  margin: 0 0 0 1em;
 }
 
 /*****GENERAL STYLES**********/
