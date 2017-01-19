@@ -43,7 +43,7 @@ embed {
   font-size: 1em;
   padding: .2em;
   width: 150px;
-  margin: 0;
+  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

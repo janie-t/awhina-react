@@ -24,9 +24,9 @@ module.exports = function (props) {
 
       <div id="mediaChoice">
         <p>Select the type of media</p>
-        <input type="checkbox" name="choose" value="text" default="true" checked/> Text
-        <input type="checkbox" name="choose" value="image" checked/> Image
-        <input type="checkbox" name="choose" value="video" checked/> Video
+        <input type="checkbox" name="choose" value="text" default="true" defaultChecked/> Text
+        <input type="checkbox" name="choose" value="image" defaultChecked/> Image
+        <input type="checkbox" name="choose" value="video" defaultChecked/> Video
       </div>
 
     </div>

@@ -8,12 +8,11 @@ import RaisedButton from 'material-ui/RaisedButton'
 const Motivate = require('./motivate')
 
 module.exports = function App (props) {
-  console.log("State", state)
 
   const { store, state } = props
 
+  console.log("state", state)
 
-  console.log("This is store", store)
   const route = state.route
 
   switch (route) {
@@ -27,32 +26,28 @@ module.exports = function App (props) {
           <p>{state.choose}</p><br/><br/>
 
           <div className="topics">
-            <RaisedButton
-              onClick={
-                () => {
-                  store.dispatch({
-                    type: 'CHANGE_ROUTE',
-                    payload: 'motivation'
-                  })
-                }
-              }
-              className="raisedButton"
-              backgroundColor="#adbce6">
-                Motivation
-            </RaisedButton><br/><br/>
-
-            <RaisedButton className="raisedButton" backgroundColor="#adbce6">
-              Study Tips
-            </RaisedButton><br/><br/>
-
-            <RaisedButton className="raisedButton" backgroundColor="#adbce6">
-              Have a laugh
-            </RaisedButton><br/><br/>
-
+            {
+              state.topics.map((topic) => {
+                return (
+                  <RaisedButton
+                    onClick={
+                      () => {
+                        store.dispatch({
+                          type: 'CHANGE_ROUTE',
+                          payload: topic
+                        })
+                      }
+                    }
+                    className="raisedButton"
+                    backgroundColor="#adbce6">
+                    {topic}
+                  </RaisedButton>
+                )
+              })
+            }
             <RaisedButton className="raisedButton" backgroundColor="pink">
               Contact us
             </RaisedButton><br/><br/>
-
           </div>
         </div>
       )
