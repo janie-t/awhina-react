@@ -52,7 +52,6 @@ module.exports = function (db) {
   })
 
   // error handlers
-
   // development error handler
   // will print stacktrace
   if (app.get('env') === 'development') {

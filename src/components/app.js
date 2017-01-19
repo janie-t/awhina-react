@@ -14,6 +14,7 @@ module.exports = function App (props) {
   console.log("State", state)
 
   console.log("These are the state.topics", state.topics)
+
   const route = state.route
 
   switch (route) {
@@ -25,8 +26,6 @@ module.exports = function App (props) {
           <h3>{state.welcome}</h3>
           <h4>{state.description}</h4><br/><br/>
           <p>{state.choose}</p><br/><br/>
-
-
 
           <div className="topics">
             {
@@ -43,17 +42,24 @@ module.exports = function App (props) {
                     }
                     className="raisedButton"
                     backgroundColor="#adbce6">
+
                       {topic}
+      
                   </RaisedButton>
                 )
               })
             }
+
             <div className ="break">
             </div>
+
+            <RaisedButton className="raisedButton" backgroundColor="pink">
+              Helpful links
+            </RaisedButton>
+
             <RaisedButton className="raisedButton" backgroundColor="pink">
               Contact us
             </RaisedButton><br/><br/>
-
           </div>
         </div>
       )
