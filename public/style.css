@@ -55,7 +55,7 @@ input {
 }
 
 .item {
-  background: red;
+  background: white;
   width: 70%;
   max-width: 800px;
   min-height: 20%;
@@ -97,6 +97,13 @@ button {
   margin: 0 0 2.5em 0;
 }
 
+input {
+  margin: 0 0 0 1em;
+}
+
+.break {
+  margin: 2em;
+}
 /*****GENERAL STYLES**********/
 
 h1 {

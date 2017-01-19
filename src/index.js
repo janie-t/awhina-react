@@ -29,6 +29,7 @@ const initialState = {
 
 const store = createStore(reducer, initialState)
 
+
 document.addEventListener('DOMContentLoaded', (e) => {
 
   store.subscribe(() => {
@@ -46,11 +47,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
   }
 
   request('/api/v1/topics', (err, res) => {
+
     console.log('This is res', res);
     store.dispatch({type: 'UPDATE_TOPICS', payload: res.body.data})
 
   })
 
-  store.dispatch({type: 'GO!'})
-
+    store.dispatch({type: 'GO'})
 })

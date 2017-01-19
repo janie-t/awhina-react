@@ -11,7 +11,9 @@ module.exports = function App (props) {
 
   const { store, state } = props
 
-  console.log("state", state)
+  console.log("State", state)
+
+  console.log("These are the state.topics", state.topics)
 
   const route = state.route
 
@@ -40,14 +42,21 @@ module.exports = function App (props) {
                     }
                     className="raisedButton"
                     backgroundColor="#adbce6">
-                    {topic}
+
+                      {topic}
+      
                   </RaisedButton>
                 )
               })
             }
+
+            <div className ="break">
+            </div>
+
             <RaisedButton className="raisedButton" backgroundColor="pink">
               Helpful links
             </RaisedButton>
+
             <RaisedButton className="raisedButton" backgroundColor="pink">
               Contact us
             </RaisedButton><br/><br/>
