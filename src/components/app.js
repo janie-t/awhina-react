@@ -48,7 +48,8 @@ module.exports = function App (props) {
                 )
               })
             }
-
+            <div className ="break">
+            </div>
             <RaisedButton className="raisedButton" backgroundColor="pink">
               Contact us
             </RaisedButton><br/><br/>

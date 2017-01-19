@@ -15,7 +15,7 @@ test('change route', t => {
   t.deepEqual(expectedState, actualState, 'should change routes')
 })
 
-test.only('update topics', (t) => {
+test('update topics', (t) => {
   const initialState = { topics: [] }
 
   const action = {

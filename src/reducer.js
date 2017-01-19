@@ -5,6 +5,7 @@ module.exports = function (state, action) {
   const newState = clone(state)
 
   switch (action.type) {
+    
     case 'CHANGE_ROUTE':
 
       newState.route = action.payload
