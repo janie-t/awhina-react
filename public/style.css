@@ -20,6 +20,11 @@ embed {
   max-height: 70%;
 }
 
+input {
+  margin-left: 1em;
+  margin-right: .3em;
+}
+
 
 /********CLASS STYLES***********/
 
