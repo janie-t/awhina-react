@@ -47,7 +47,7 @@ input {
   background: #adbce6;
   font-size: 1em;
   padding: .2em;
-  width: 150px;
+  width: 100%;
   margin: 10px;
   display: flex;
   align-items: center;
@@ -102,25 +102,25 @@ button {
 h1 {
   text-align: center;
   font-family: 'Lobster', cursive;
-  font-size: 2.2em;
+  font-size: 3em;
 }
 
 h3 {
   text-align: center;
   font-family: 'Arimo', sans-serif;
-  font-size: 1.1em;
+  font-size: 2em;
 }
 
 h4 {
   text-align: center;
   font-family: 'Arimo', sans-serif;
-  font-size: 1em;
+  font-size: 1.7em;
   margin: auto;
 }
 
 p {
   text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: 'Arimo', sans-serif;
   margin: 0;
 }
@@ -136,7 +136,7 @@ a {
 
 @media (min-width:550px) {
   h1 {
-    font-size: 3em;
+    font-size: 3.5em;
   }
 
   h3 {
@@ -148,7 +148,7 @@ a {
   }
 
   p {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   a {
@@ -166,4 +166,16 @@ a {
   .one {
       font-size: .8em;
   }
+
+  .raisedButton {
+    font-size: 1.7em;
+    width: 70%;
+    margin: 10px;
+    padding: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
 }
