@@ -1,4 +1,4 @@
-{
+module.exports = {
   route: 'index',
   appName: 'āwhina',
   welcome: 'Haere mai ki āwhina | Welcome to āwhina.',

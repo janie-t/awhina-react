@@ -1,5 +1,11 @@
+
+const debug = require('debug')('components:checkout')
+const _= require('lodash')
+
+//modules
 const React = require('react')
-import RaisedButton from 'material-ui/RaisedButton'
+const { connect } = require('react-redux')
+const { Link } = require('react-router')
 
 module.exports = function (props) {
   const { route, appName, topic } = props
@@ -29,7 +35,12 @@ module.exports = function (props) {
         <input type="checkbox" name="choose" value="video" defaultChecked/> Video
       </div>
 
-    </div>
-  )
+      {props.children}
 
+    </div>
+
+  )
 }
+
+module.exports = connect((state) => state)(Display)
+//Display will now have the state and store.dispatch merged into its props
