@@ -1,5 +1,5 @@
-const topics = require('./topics')
+const myRoute = require('./topics')
 
 module.exports = {
-  topics: topics
+  myRoute
 }
